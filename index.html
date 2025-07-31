@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>National Girlfriend Day</title>
+  <style>
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff0f6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  border: 2px dashed pink;
+  display: none;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+h1, h2 {
+  color: #ff4da6;
+  margin: 10px 0;
+  word-wrap: break-word;
+}
+
+h1 {
+  font-size: 6vw;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 5vw;
+}
+
+p {
+  font-size: 4vw;
+  color: #444;
+  text-align: center;
+}
+
+button {
+  background-color: #ffb6c1;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  margin-top: 20px;
+  font-size: 4vw;
+  max-width: 200px;
+}
+
+button:hover {
+  background-color: #ff99b3;
+}
+
+#welcomeCard,
+#envelopeCard,
+#messageCard {
+  display: none;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.start-over {
+  background-color: #ff80bf;
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 15px;
+  }
+  button {
+    font-size: 14px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="card" id="welcomeCard">
+    <img src="cat1.jpg" alt="cat">
+    <h1>HAPPY NATIONAL<br>GIRLFRIEND DAY</h1>
+    <p>Click the next button!! (づ ◕‿◕ )づ ♥</p>
+    <button onclick="nextToEnvelope()">Next!!</button>
+  </div>
+
+  <div class="card" id="envelopeCard">
+    <img src="open.jpg" alt="envelope">
+    <h2>Do you want to open it?</h2>
+    <p>Open itヽ(>_<)ノ</p>
+    <div class="btns">
+      <button onclick="openMessage()">Open it</button>
+      <button onclick="alert('No ty 😢')">No</button>
+    </div>
+  </div>
+
+  <div class="card" id="messageCard">
+    <img src="bebi.jpg" alt="girlfriend">
+    <h2>To my baby<br>(^｡^)</h2>
+    <p style="text-align: left;">
+      You're the best thing that life has given me so far and I know nothing can take your place in my heart. The love I have for you is pure, with all my heart! You bring so much joy into my life even in the darkest times just by being with me.<br><br>
+      I'm so blessed to have met you in my journey in life. It feels like I have been living in paradise since I met you. You have made me a better person and have always believed in me. <br><br>
+      Life comes with challenges but with you by my side, we can take anything together. I love you for all what you are, all that you have been and all that you are yet to be. If I know what love is, it is because of you!<br><br>
+      I LOVE YOU SO MUCH MY LOVE! HAPPY GIRLFRIEND’S DAY!
+    </p>
+    <button class="start-over" onclick="startOver()">Start Over ♥</button>
+  </div>
+
+  <script>
+    // Initial screen
+    document.getElementById('welcomeCard').style.display = 'block';
+
+    function nextToEnvelope() {
+      document.getElementById('welcomeCard').style.display = 'none';
+      document.getElementById('envelopeCard').style.display = 'block';
+    }
+
+    function openMessage() {
+      document.getElementById('envelopeCard').style.display = 'none';
+      document.getElementById('messageCard').style.display = 'block';
+    }
+
+    function startOver() {
+      document.getElementById('messageCard').style.display = 'none';
+      document.getElementById('welcomeCard').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
